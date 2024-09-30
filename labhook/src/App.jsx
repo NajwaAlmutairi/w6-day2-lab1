@@ -28,7 +28,7 @@ function App() {
         </button>
 
         <div className="mb-6">
-          <h2 className="text-xl">The First Number: {numberOne}</h2>
+          <h2 className={`text-xl ${darkMode ? 'text-white' : 'text-black'}`}>The First Number: {numberOne}</h2>
           <div className="flex justify-around mt-2">
             <button onClick={() => setNumberOne(numberOne + 1)} className="btn bg-red-300">+</button>
             <button onClick={() => setNumberOne(numberOne - 1)} className="btn bg-red-300">-</button>
@@ -36,14 +36,14 @@ function App() {
         </div>
 
         <div className="mb-6">
-          <h2 className="text-xl">The Second Number: {numberTwo}</h2>
+          <h2 className={`text-xl ${darkMode ? 'text-white' : 'text-black'}`}>The Second Number: {numberTwo}</h2>
           <div className="flex justify-around mt-2">
             <button onClick={() => setNumberTwo(numberTwo + 1)} className="btn bg-red-300">+</button>
             <button onClick={() => setNumberTwo(numberTwo - 1)} className="btn bg-red-300">-</button>
           </div>
         </div>
 
-        <h3 className="text-lg mb-2">Operations:</h3>
+        <h3 className={`text-xl ${darkMode ? 'text-white' : 'text-black'}`}>Operations:</h3>
         <div className="flex justify-around mb-4">
           <button onClick={() => setResult(numberOne + numberTwo)} className="btn bg-red-300">+</button>
           <button onClick={() => setResult(numberOne - numberTwo)} className="btn bg-red-300">-</button>
@@ -51,7 +51,7 @@ function App() {
           <button onClick={() => setResult(numberOne % numberTwo)} className="btn bg-red-300">%</button>
         </div>
 
-        <h2 className="text-2xl font-bold">Result: {result}</h2>
+        <h2 className={`text-2xl font-bold ${darkMode ? 'text-white' : 'text-black'}`}>Result: {result}</h2>
       </div>
       <div className={`mt-3 flex flex-col items-center gap-2 p-1 border-2 rounded-lg shadow-md ${darkMode ? 'border-white' : 'border-black'}`}>
         <div className="relative w-full max-w-xs overflow-hidden rounded-lg shadow-md">
